@@ -5,6 +5,7 @@ require 'json'
 require 'csv'
 
 set :bind, '0.0.0.0'
+set :port, 80
 
 # The URI to do the stock symbol lookup.
 # Returns a JSON document with stock name and price.
