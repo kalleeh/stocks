@@ -24,11 +24,7 @@ end
 # Function to do the stock price lookup.
 # Makes a call to the Yahoo Finance API and returns result
 def lookup_stock(name)
-  uri = URI("http://download.finance.yahoo.com/d/quotes.csv?")
-  params = { :s => name, :f => 'nl1r' }
-  uri.query = URI.encode_www_form(params)
-  res = Net::HTTP.get_response(uri)
-  res.body if res.is_a?(Net::HTTPSuccess)
+  return StockQuote::Stock.quote(name)
 end
 
 # Converts CSV output from API call into a JSON document
