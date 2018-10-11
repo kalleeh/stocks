@@ -3,6 +3,7 @@ require 'sinatra'
 require 'net/http'
 require 'json'
 require 'csv'
+require 'stock_quote'
 
 set :bind, '0.0.0.0'
 set :port, 80
